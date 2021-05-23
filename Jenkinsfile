@@ -3,6 +3,18 @@ pipeline {
  agent any
 
  stages {
+  stage('GIT') {
+  
+   steps{
+    git branch: 'main', credentialsId: 'c4d00eab-827f-4380-8985-50c2267b921f', url: 'https://github.com/gamidi95/gamidi95.git'
+   }
+  
+  }
+  
+  
+ }
+ 
+ /* stages {
 
     stage('build in master') {
 
@@ -95,11 +107,10 @@ pipeline {
  always {
 
   cleanWs()
-
  }
 
  }
-
+*/
 }
 
 
