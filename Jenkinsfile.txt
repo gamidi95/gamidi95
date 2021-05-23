@@ -6,7 +6,7 @@ pipeline {
 
  stages {
 
-    stage('build') {
+    stage('build in master') {
 
       steps {
 
@@ -16,10 +16,96 @@ pipeline {
 
     }
 
-   
+    stage('test in master') {
+
+  when {
+
+  branch comparator: 'EQUALS', pattern: 'test'
+
+  }
+
+      steps {
+
+        echo 'Hello World'
+
+      }
 
  }
+
+    stage('deploy in master') {
+
+      steps {
+
+        echo 'Hello World'
+
+      }
+
+    }
+
+ stage('build') {
+
+ when {
+
+  branch comparator: 'EQUALS', pattern: 'test'
+
+  }
+
+      steps {
+
+        echo 'Hello World'
+
+      }
+
+    }
+
+    stage('test') {
+
+  when {
+
+  branch comparator: 'EQUALS', pattern: 'test'
+
+  }
+
+      steps {
+
+        echo 'Hello World'
+
+      }
+
+ }
+
+    stage('deploy') {
+
+ when {
+
+  branch comparator: 'EQUALS', pattern: 'test'
+
+  }
+
+      steps {
+
+        echo 'Hello World'
+
+      }
+
+    }
+
+ }
+
+ post {
+
+ always {
+
+  cleanWs()
+
+ }
+
+ }
+
 }
+
+
+
 
 
 
