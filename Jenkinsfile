@@ -10,15 +10,17 @@ pipeline {
    }
   
   }
-  /*stage('Maven'){ 
+  } 
+  
+ 
+ /* 
+ stage('Maven'){ 
    steps{ 
     build 'PipeLprj1'
    }
-  } *\
   
- }
  
- /* stages {
+ stages {
 
     stage('build in master') {
 
