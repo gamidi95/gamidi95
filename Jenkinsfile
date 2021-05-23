@@ -10,11 +10,11 @@ pipeline {
    }
   
   }
-  stage('Maven'){ 
+  /*stage('Maven'){ 
    steps{ 
     build 'PipeLprj1'
    }
-  }
+  } *\
   
  }
  
