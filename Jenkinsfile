@@ -2,6 +2,7 @@ pipeline {
 
  agent any
 
+ /*
  stages {
   stage('GIT') {
   
@@ -13,13 +14,13 @@ pipeline {
   } 
   
  
- /* 
+ 
  stage('Maven'){ 
    steps{ 
     build 'PipeLprj1'
    }
   
- 
+ */
  stages {
 
     stage('build in master') {
@@ -116,7 +117,7 @@ pipeline {
  }
 
  }
-*/
+
 }
 
 
